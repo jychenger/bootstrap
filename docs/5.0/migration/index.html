@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Track and review changes to the Bootstrap source files, documentation, and components to help you migrate from v4 to v5.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Hugo 0.82.0">
+<meta name="generator" content="Hugo 0.82.1">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
@@ -17,7 +17,7 @@
 
 
 <!-- Bootstrap core CSS -->
-<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
 
 <link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
 
@@ -398,17 +398,22 @@
           <strong class="d-block h6 my-2 pb-2 border-bottom">On this page</strong>
           <nav id="TableOfContents">
   <ul>
+    <li><a href="#v500">v5.0.0</a>
+      <ul>
+        <li><a href="#javascript">JavaScript</a></li>
+      </ul>
+    </li>
     <li><a href="#v500-beta3">v5.0.0-beta3</a>
       <ul>
         <li><a href="#components">Components</a></li>
-        <li><a href="#javascript">JavaScript</a></li>
+        <li><a href="#javascript-1">JavaScript</a></li>
         <li><a href="#utilities">Utilities</a></li>
       </ul>
     </li>
     <li><a href="#v500-beta2">v5.0.0-beta2</a>
       <ul>
         <li><a href="#utilities-1">Utilities</a></li>
-        <li><a href="#javascript-1">JavaScript</a></li>
+        <li><a href="#javascript-2">JavaScript</a></li>
       </ul>
     </li>
     <li><a href="#v500-beta1">v5.0.0-beta1</a>
@@ -425,7 +430,7 @@
             </li>
           </ul>
         </li>
-        <li><a href="#javascript-2">JavaScript</a></li>
+        <li><a href="#javascript-3">JavaScript</a></li>
         <li><a href="#sass-1">Sass</a></li>
         <li><a href="#utilities-3">Utilities</a></li>
         <li><a href="#components-2">Components</a>
@@ -477,7 +482,7 @@
       <ul>
         <li><a href="#browser-support-1">Browser support</a></li>
         <li><a href="#sass-4">Sass</a></li>
-        <li><a href="#javascript-3">JavaScript</a></li>
+        <li><a href="#javascript-4">JavaScript</a></li>
         <li><a href="#color-system">Color system</a></li>
         <li><a href="#grid-and-layout">Grid and layout</a></li>
         <li><a href="#content-reboot-etc">Content, Reboot, etc</a></li>
@@ -513,12 +518,17 @@
       <div class="bd-content ps-lg-4">
         
 
-        <h2 id="v500-beta3">v5.0.0-beta3</h2>
+        <h2 id="v500">v5.0.0</h2>
+<h3 id="javascript">JavaScript</h3>
+<ul>
+<li>Dropdowns now have one more option (<code>autoClose</code>) to handle the <a href="/docs/5.0/components/dropdowns/#auto-close-behavior">auto close behavior</a>. You can use this option to accept the click inside or outside the dropdown menu to make it interactive.</li>
+</ul>
+<h2 id="v500-beta3">v5.0.0-beta3</h2>
 <h3 id="components">Components</h3>
 <ul>
 <li>Added new <a href="/docs/5.0/components/list-group/#numbered"><code>.list-group-numbered</code> modifier</a> to list groups.</li>
 </ul>
-<h3 id="javascript">JavaScript</h3>
+<h3 id="javascript-1">JavaScript</h3>
 <ul>
 <li>
 <p>All plugins can now accept a CSS selector as the first argument. You can either pass a DOM element or any valid CSS selector to create a new instance of the plugin:</p>
@@ -541,7 +551,7 @@
 <li><code>bootstrap-utilities.css</code> now also includes our helpers. Helpers don&rsquo;t need to be imported in custom builds anymore.</li>
 <li>Extended form validation states customization capabilities. Added three new optional parameters to the <code>form-validation-state</code> mixin: <code>tooltip-color</code>, <code>tooltip-bg-color</code>, <code>focus-box-shadow</code>. These parameters can be set in the <code>$form-validation-states</code> map. <a href="https://github.com/twbs/bootstrap/pull/31757">See #31757</a>.</li>
 </ul>
-<h3 id="javascript-1">JavaScript</h3>
+<h3 id="javascript-2">JavaScript</h3>
 <ul>
 <li>Restored <code>offset</code> option for Dropdown, Popover and Tooltip plugins.</li>
 <li>The default value for the <code>fallbackPlacements</code> is changed to <code>['top', 'right', 'bottom', 'left']</code> for better placement of popper elements.</li>
@@ -573,7 +583,7 @@
 <li>Renamed <code>.text-left</code> and <code>.text-right</code> to <code>.text-start</code> and <code>.text-end</code>.</li>
 </ul>
 <p>Breakpoints specific variants are consequently renamed too (e.g. <code>.text-md-start</code> replaces <code>.text-md-left</code>).</p>
-<p><strong>Note</strong>: if you used v4 to make RTL pages, ensure to reverse changes mentioned above: e.g. use <code>.*-start</code> were you used <code>.*-right</code>.</p>
+<p><strong>Note</strong>: if you used v4 to make RTL pages, ensure to reverse changes mentioned above: e.g. use <code>.*-start</code> where you used <code>.*-right</code>.</p>
 <h5 id="mixins">Mixins</h5>
 <ul>
 <li>Renamed <code>border-left-radius()</code> and <code>border-right-radius()</code> to <code>border-start-radius()</code> and <code>border-end-radius()</code> — as well as their corner relative variants (eg. <code>.border-bottom-left-radius</code> became <code>.border-bottom-start-radius</code>).</li>
@@ -589,7 +599,7 @@
 <li>Renamed <code>$form-check-inline-margin-right</code> to <code>$form-check-inline-margin-end</code>.</li>
 <li>Renamed <code>$form-select-feedback-icon-padding-right</code> to <code>$form-select-feedback-icon-padding-end</code>.</li>
 </ul>
-<h3 id="javascript-2">JavaScript</h3>
+<h3 id="javascript-3">JavaScript</h3>
 <ul>
 <li>Data attributes for all JavaScript plugins are now namespaced to help distinguish Bootstrap functionality from third parties and your own code. For example, we use <code>data-bs-toggle</code> instead of <code>data-toggle</code>.</li>
 <li>Updated Popper to v2.x:
@@ -830,7 +840,7 @@
 <li>The <code>box-shadow()</code> mixin now better supports <code>none</code> and <code>null</code> with multiple arguments. Now you can pass multiple arguments with either value and get the expected output. <a href="https://github.com/twbs/bootstrap/pull/30394">See #30394</a>.</li>
 <li>Each <code>border-radius()</code> mixin now has a default value. You can now call these mixins without specifying a border radius value and the <code>$border-radius</code> variable will be used. <a href="https://github.com/twbs/bootstrap/pull/31571">See #31571</a></li>
 </ul>
-<h3 id="javascript-3">JavaScript</h3>
+<h3 id="javascript-4">JavaScript</h3>
 <p>Changes to our source and compiled JavaScript files.</p>
 <ul>
 <li>Dropped jQuery dependency and rewrote plugins to be in regular JavaScript.</li>
@@ -999,20 +1009,65 @@
   </div>
 
 
-    <footer class="bd-footer p-3 p-md-5 mt-5 bg-light text-center text-sm-start">
-  <div class="container">
-    <ul class="bd-footer-links ps-0 mb-3">
-      <li class="d-inline-block"><a href="https://github.com/twbs">GitHub</a></li>
-      <li class="d-inline-block ms-3"><a href="https://twitter.com/getbootstrap">Twitter</a></li>
-      <li class="d-inline-block ms-3"><a href="/docs/5.0/examples/">Examples</a></li>
-      <li class="d-inline-block ms-3"><a href="/docs/5.0/about/overview/">About</a></li>
-    </ul>
-    <p class="mb-0">Designed and built with all the love in the world by the <a href="/docs/5.0/about/team/">Bootstrap team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
-    <p class="mb-0">Currently v5.0.0-beta3. Code licensed <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</p>
+    <footer class="bd-footer py-5 mt-5 bg-light">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-lg-3 mb-3">
+        <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/" aria-label="Bootstrap">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-block me-2" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"/></svg>
+          <span class="fs-5">Bootstrap</span>
+        </a>
+        <ul class="list-unstyled small text-muted">
+          <li class="mb-2">Designed and built with all the love in the world by the <a href="/docs/5.0/about/team/">Bootstrap team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</li>
+          <li class="mb-2">Code licensed <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
+          <li class="mb-2">Currently v5.0.0.</li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+        <h5>Links</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="/">Home</a></li>
+          <li class="mb-2"><a href="/docs/5.0/">Docs</a></li>
+          <li class="mb-2"><a href="/docs/5.0/examples/">Examples</a></li>
+          <li class="mb-2"><a href="https://opencollective.com/bootstrap">Themes</a></li>
+          <li class="mb-2"><a href="https://blog.getbootstrap.com/">Blog</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-3">
+        <h5>Guides</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="/docs/5.0/getting-started/">Getting started</a></li>
+          <li class="mb-2"><a href="/docs/5.0/examples/starter-template/">Starter template</a></li>
+          <li class="mb-2"><a href="/docs/5.0/getting-started/webpack/">Webpack</a></li>
+          <li class="mb-2"><a href="/docs/5.0/getting-started/parcel/">Parcel</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-3">
+        <h5>Projects</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap">Bootstrap 5</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/tree/v4-dev">Bootstrap 4</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/icons">Icons</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/rfs">RFS</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap-npm-starter">npm starter</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-3">
+        <h5>Community</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/issues">Issues</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/discussions">Discussions</a></li>
+          <li class="mb-2"><a href="https://github.com/sponsors/twbs">Corporate sponsors</a></li>
+          <li class="mb-2"><a href="https://opencollective.com/bootstrap">Open Collective</a></li>
+          <li class="mb-2"><a href="https://bootstrap-slack.herokuapp.com/">Slack</a></li>
+          <li class="mb-2"><a href="https://stackoverflow.com/questions/tagged/bootstrap-5">Stack Overflow</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </footer>
 
-    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
